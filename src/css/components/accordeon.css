@@ -99,3 +99,28 @@
     right: auto;
     transform-origin: center;
 }
+
+.accordeon > details {
+    flex-shrink: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+.accordeon > details[open] {
+    width: 400px;
+}
+
+.accordeon > details[open] > div {
+    animation: apparition 0.5s ease-in-out;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
