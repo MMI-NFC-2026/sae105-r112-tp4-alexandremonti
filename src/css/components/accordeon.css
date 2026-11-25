@@ -43,3 +43,19 @@
 .accordeon > details > summary::-webkit-details-marker {
     display: none;
 }
+
+.accordeon > details > summary::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid grey;
+    transition: transform 0.3s ease;
+}
+
+.accordeon > details[open] > summary::after {
+    transform: rotate(90deg);
+    border-left-color: pink;
+}
