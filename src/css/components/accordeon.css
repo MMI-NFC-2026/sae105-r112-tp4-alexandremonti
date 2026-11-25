@@ -60,9 +60,6 @@
     border-left-color: pink;
 }
 
-
-
-
 .accordeon > details > summary {
     position: relative;
     display: block;
